@@ -1,0 +1,57 @@
+
+// ===================================================Налаштування адаптивної сітки==================================================
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1070;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+
+// COLOR
+$primary: #2E2C34;
+$secondary: #fff;
+$black: #000;
+$opacityBlack: rgba(0, 0, 0, 0.8);
+$darkGrey: rgba(73, 70, 79, 0.80);
+$purple: #7140EB;
+$lightPurple: #F1EEF8; 
+$light: #F5F5F7;
+$opacityColor: rgba(255, 255, 255, 0.50);
+
+
+
+// FONTS
+$primaryFont: 'Roboto'; 
+
+// MEDIA
+
+$pageLayout: 1279px;
+$pageLayoutP1: calc($pageLayout + 1px);
+
+$laptopM: 1199px;
+$laptopMP1: calc($laptopM + 1px);
+
+$laptop: 1023px;
+$laptopP1: calc($laptop + 1px);
+
+$tabletM: 991px;
+$tabletMP1: calc($tabletM + 1px);
+
+$tablet: 767px;
+$tabletP1: calc($tablet + 1px);
+
+$tabletS: 549px;
+$tabletSP1: calc($tabletS + 1px);
+
+$mobileL: 424px;
+$mobileLP1: calc($mobileL + 1px);
+
+$mobileM: 374px;
+$mobileMP1: calc($mobileM + 1px);
+

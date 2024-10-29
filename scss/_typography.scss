@@ -1,0 +1,68 @@
+
+body {
+    font-family: $primaryFont;
+    color: $primary;
+}
+
+h1 {
+    @include adaptiveValue('font-size', 99, 38);
+    color: $secondary;
+    text-align: center;
+    line-height: 1.12; 
+    letter-spacing: toRem(5);
+}
+
+h2 {
+    @include adaptiveValue('font-size', 67, 30);
+    line-height: 1; 
+}
+
+h3 {
+    font-size: toRem(29);
+    line-height: 1.18; 
+}
+
+h4 {
+    font-size: toRem(18);
+    line-height: 1.2; 
+}
+
+h5 {
+    color: $opacityColor;
+    line-height: 1.5; 
+}
+
+
+h1 {
+    margin-top: toRem(10);
+
+    &+p {
+        margin-top: toRem(20);
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: toRem(30);
+
+    &+p,
+    &+ul,
+    &+ol {
+        margin-top: toRem(20);
+    }
+}
+
+ul, ol, p {
+    margin-top: toRem(30);
+
+    li {
+        &+li {
+            margin-top: toRem(10);
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6, ul, ol, p {
+    &:first-child {
+        margin-top: 0;
+    }
+}

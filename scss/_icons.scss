@@ -1,0 +1,31 @@
+  [class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons';
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-arrow-right:before {
+  content: "\e900";
+}
+._icon-check:before {
+  content: "\e901";
+}
+._icon-cross:before {
+  content: "\e902";
+}
+._icon-facebook:before {
+  content: "\e903";
+}
+._icon-instagram:before {
+  content: "\e904";
+}
+._icon-linkedin:before {
+  content: "\e905";
+}
+._icon-twitter:before {
+  content: "\e906";
+}

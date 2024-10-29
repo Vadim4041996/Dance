@@ -1,0 +1,61 @@
+
+.button {
+    padding: toRem(11) toRem(20);
+    border-radius: toRem(999);
+    border: toRem(1) solid $purple;
+    background-color: $purple;
+    color: $secondary;
+    font-size: toRem(16);
+    line-height: 1;
+    transition: all .3s;
+    
+    @media(min-width: $mobileLP1) {
+        padding: toRem(11) toRem(39);
+    }
+    @media(any-hover:hover) {
+        &:hover {
+            background-color: $secondary;
+            border: toRem(1) solid $primary;
+            color: $primary;
+            span {
+                &::before {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+
+    span {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: toRem(6.4);
+        &::before {
+            font-size: toRem(24);
+            color: $primary;
+            transition: all .3s;
+        }
+    }
+
+    &--large-font-size {
+        font-size: toRem(18);
+    }
+    &--large-padding {
+        padding: toRem(21) toRem(39);
+    }
+    &--largest-padding {
+        padding: toRem(21) toRem(54);
+    }
+    &--light-bg {
+        background-color: $light;
+        color: $primary;
+        border: toRem(1) solid $primary;
+        @media(any-hover:hover) {
+            &:hover {
+                background-color: $purple;
+                border: toRem(1) solid $purple;
+                color: $secondary;
+            }
+        }
+    } 
+}

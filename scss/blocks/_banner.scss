@@ -1,0 +1,113 @@
+
+.banner {
+    position: relative;
+    min-height: 100%;
+    color: $primary;
+    background-color: $light;
+
+    &:has(.banner__image) {
+        color: $secondary;
+        background-color: transparent;
+    }
+
+    // .banner__image
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .banner__container
+    &__container {
+        position: relative;
+        z-index: 2;
+
+        padding-block: toRem(50);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        column-gap: toRem(20);
+        row-gap: toRem(30);
+
+        @media(min-width: $tabletSP1) {
+            flex-direction: row;
+            padding-top: toRem(98);
+            padding-bottom: toRem(61);
+        }
+    }
+
+    // .banner__body
+    &__body {
+        width: 100%;
+        line-height: 1.18;
+        align-self: self-end;
+
+        @media(min-width: $tabletSP1) {
+            width: toRem(320);
+            font-size: toRem(21);
+        }
+
+        p {
+            margin-top: toRem(12);
+            @media(min-width: $tabletSP1) {
+                width: toRem(242);
+            }
+        }
+    }
+
+    // .banner__button
+    &__button {
+        margin-top: toRem(10);
+
+        @media(min-width: $tabletSP1) {
+            margin-top: toRem(29);
+        }
+        @media(max-width: $tablet) {
+            padding: toRem(11) toRem(39);
+        }
+    }
+
+    // .banner__string
+    &__string {
+        margin-top: toRem(10);
+        line-height: 1.25;
+
+        @media(min-width: $tabletSP1) {
+            margin-top: toRem(33);
+            font-size: toRem(18);
+        }
+    }
+
+    // .banner__text
+    &__text {
+        width: 100%;
+        @media(min-width: $tabletSP1) {
+            width: toRem(473);
+        }
+    }
+
+    // .banner__list
+    &__list {
+        margin-top: 0;
+        line-height: 1.11;
+        letter-spacing: toRem(5);
+        @include adaptiveValue('font-size', 100, 34);
+
+        @media(min-width: $tabletSP1) {
+            text-align: right;
+        }
+    }
+
+    // .banner__item
+    &__item {
+        margin-top: 0;
+    }
+}

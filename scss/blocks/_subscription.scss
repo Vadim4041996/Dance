@@ -1,0 +1,107 @@
+
+.subscription {
+    margin-block: toRem(50);
+    @media(min-width: $tabletP1) {
+        margin: toRem(69) 0 toRem(74);
+    }
+
+    // .subscription__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        column-gap: toRem(20);
+        row-gap: toRem(30);
+
+        @media(min-width: $tabletMP1) {
+            flex-direction: row;
+        }
+    }
+
+    // .subscription__info
+    &__info {
+        width: 100%;
+        font-size: toRem(18);
+        line-height: 1.18;
+
+        @media(min-width: $tabletP1) {
+            font-size: toRem(21);
+        }
+        @media(min-width: $tabletMP1) {
+            width: toRem(282);
+        }
+        p {
+            margin-top: toRem(20);
+            @media(min-width: $tabletP1) {
+                margin-top: toRem(27);
+            }
+        }
+    }
+
+    // .subscription__list
+    &__list {
+        margin-top: toRem(25);
+        font-size: toRem(16);
+        line-height: 1.35;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: toRem(16);
+        @media(min-width: $tabletP1) {
+            margin-top: toRem(36);
+        }
+    }
+
+    // .subscription__item
+    &__item {
+        margin-top: 0;
+        padding: toRem(7) toRem(16);
+        background-color: $light;
+        border-radius: toRem(40);
+
+        display: inline-flex;
+        align-items: center;
+        gap: toRem(16);
+        &::before {
+            font-size: toRem(16);
+        }
+    }
+
+    // .subscription__cards
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: toRem(16);
+
+        @media(min-width: $tabletSP1) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(min-width: $tabletMP1) {
+            width: toRem(684);
+        }
+    }
+
+    // .subscription__card
+    &__card {
+        .button {
+            @media(max-width: $tablet) {
+                padding: toRem(11) toRem(39);
+            }
+        }
+        // .card__button {
+        //     @media(min-width: $tabletP1) {
+        //         padding-inline: toRem(54);
+        //     }
+        //     &.button {
+        //         &--large-padding {
+        //             @media(max-width: $tablet) {
+        //                 // display: none;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

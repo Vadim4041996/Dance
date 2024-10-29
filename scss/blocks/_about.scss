@@ -1,0 +1,99 @@
+
+.about {
+    margin-block: toRem(50);
+    position: relative;
+    min-height: toRem(360);
+
+    @media(min-width: $tabletP1) {
+        margin: toRem(68) 0 toRem(73);
+    }
+    @media(max-width: $tablet) {
+        min-height: toRem(260);
+    }
+    
+    &:has(.about__image) {
+        @media(max-width: $tablet) {
+            min-height: toRem(360);
+        }
+    }
+    
+    // .about__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(20);
+    }
+
+    // .about__body
+    &__body {
+        width: 100%;
+
+        @media(min-width: $tabletP1) {
+            width: 37.6%;
+        }
+    }
+
+    // .about__list
+    &__list {
+        margin-top: toRem(20);
+        line-height: 1.22;
+        counter-reset: list-counter;
+
+        @media(min-width: $tabletP1) {
+            margin-top: toRem(71);
+            font-size: toRem(28);
+        }
+    }
+
+    // .about__item
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(15);
+
+        &:not(:first-child) {
+            margin-top: toRem(15);
+            @media(min-width: $tabletP1) {
+                margin-top: toRem(24);
+            }
+        }
+
+        &::before {
+            content: counter(list-counter)'.';
+            counter-increment: list-counter;
+        }
+    }
+
+    // .about__button
+    &__button {
+        margin-top: toRem(20);
+        @media(min-width: $tabletP1) {
+            margin-top: toRem(51);
+        }
+        @media(max-width: $tablet) {
+            padding: toRem(11) toRem(39);
+        }
+    }
+
+    // .about__image
+    &__image {
+        position: relative;
+        right: toRem(-15);
+
+        @media(min-width: $tabletP1) {
+            position: absolute;
+            right: 0;
+            bottom: toRem(16);
+            width: 59.8%;
+        }
+        @media(min-width: $pageLayoutP1) {
+            width: toRem(766);
+        }
+        
+        img {
+            aspect-ratio: 766 / 359;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
