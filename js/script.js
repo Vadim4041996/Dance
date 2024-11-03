@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // AOS
     AOS.init({
         duration: 1000,
+        offset: 0,
+        once: true,
     });
 
     // Click
